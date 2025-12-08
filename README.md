@@ -68,7 +68,6 @@ https://github.com/user-attachments/assets/9ded5a37-c168-4ab4-8bac-cca2a4195628
 ---
 
 <details>
----
 
 
 <summary><strong>1. Lokal installation</strong></summary>
