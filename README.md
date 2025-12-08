@@ -200,9 +200,6 @@ MCP-servern implementerar MCP-protokollet med stöd för:
 ## Användningsområden
 
 
-https://github.com/user-attachments/assets/8eefa26c-4162-49a5-adf0-82677a663b19
-
-
 ### För Lärare
 - **Kursplanering:** "Jämför kunskapskraven E och A för Svenska 1 och ge förslag på bedömningsuppgifter"
 - **Tematiskt arbete:** "Hitta alla kurser i gymnasiet som har hållbarhet i sitt centrala innehåll"
@@ -218,15 +215,15 @@ https://github.com/user-attachments/assets/8eefa26c-4162-49a5-adf0-82677a663b19
 - **Kursutbud:** "Vilka skolor erbjuder Ekonomiprogrammet i Malmö?"
 - **Läroplansanalys:** "Analysera hur begreppet 'programmering' har utvecklats i läroplaner 2011-2025"
 
+https://github.com/user-attachments/assets/8eefa26c-4162-49a5-adf0-82677a663b19
+
 ---
 
 ## Övrigt
 **Skapad av:** [Isak Skogstad](mailto:isak.skogstad@me.com) • [X/Twitter](https://x.com/isakskogstad)
 
-[![MCP Badge](https://lobehub.com/badge/mcp/ksaklfszf921-skolverket-syllabus-mcp)](https://lobehub.com/mcp/ksaklfszf921-skolverket-syllabus-mcp)
+Data från Skolverkets öppna API:er. 
+
+Villkor: Fri användning 
 
 ---
-
-## 📝 Licens
-
-MIT License – Data från Skolverkets öppna API:er. Inte officiellt associerad med Skolverket.
