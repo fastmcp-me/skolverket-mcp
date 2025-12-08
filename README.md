@@ -7,97 +7,39 @@
 [![MCP Protocol](https://img.shields.io/badge/MCP-2025--03--26-green)](https://modelcontextprotocol.io/)
 [![License](https://img.shields.io/badge/license-MIT-orange)](LICENSE)
 
-En [Model Context Protocol (MCP)](https://modelcontextprotocol.io/) server som ger AI-assistenter tillgång till **alla Skolverkets öppna API:er** – Läroplan API, Skolenhetsregistret och Planned Educations API.
-
-**Skapad av:** [Isak Skogstad](mailto:isak.skogstad@me.com) • [X/Twitter](https://x.com/isakskogstad)
+En [Model Context Protocol (MCP)](https://modelcontextprotocol.io/) server som ger AI-assistenter tillgång till **alla Skolverkets öppna API:er** – Läroplan API, Skolenhetsregistret och Planned Educations API. Genom att ansluta till MCP-servern kan du med hjälp av AI söka, hitta, jämföra och analysera all data och statistik som finns tillgängligt i Skolverkets öppna databaser. 
 
 ---
 
-## 🚀 Två sätt att använda
+## Snabbstart 
 
-### 🌐 Remote Server (Rekommenderat)
-**Hostad på Render – gratis och alltid uppdaterad**
-
-Använd den publika servern direkt utan installation:
-```
-https://skolverket-mcp.onrender.com/mcp
-```
-
-✅ Ingen installation krävs
-✅ Fungerar direkt i ChatGPT, Claude, Cursor, VS Code
-✅ Alltid senaste versionen
-✅ Kostnadsfritt
-
-### 💻 Lokal Installation
-**För utveckling eller offline-användning**
-
-Klona och kör lokalt:
-```bash
-git clone https://github.com/KSAklfszf921/skolverket-mcp.git
-cd skolverket-mcp
-npm install && npm run build
-```
-
-✅ Full kontroll över koden
-✅ Fungerar offline
-✅ Perfekt för utveckling och testning
-
----
-
-## 🛠️ Funktioner
-
-MCP-servern implementerar MCP-protokollet med stöd för:
-- **41 verktyg** – 17 Syllabus API, 4 School Units, 17 Planned Educations (inkl. gymnasieutbildningar, statistik, dokument), 3 Support Data, 1 diagnostik
-- **4 resurser** – API-info, skoltyper, läroplanstyper, kurs- och ämneskoder
-- **5 promptmallar** – Kursanalys, versionsjämförelser, vuxenutbildning, studievägledning, kursplanering
-
-### Nya verktyg i v2.7.0
-**Gymnasieutbildningar:**
-- `search_education_events` - Sök gymnasieutbildningar
-- `count_education_events` - Räkna gymnasieträffar
-- `get_school_unit_education_events` - Utbildningar per skola
-
-**Vuxenutbildning:**
-- `count_adult_education_events` - Räkna vuxenutbildningar
-- `get_adult_education_areas_v4` - Alla utbildningsområden
-
-**Skolenheter:**
-- `search_school_units_v4` - Utökad skolenhetssökning
-
-**Support Data:**
-- `get_school_types_v4` - Alla skoltyper
-- `get_geographical_areas_v4` - Län och kommuner
-- `get_programs_v4` - Gymnasieprogram
-
-**Statistik & Dokument:**
-- `get_school_unit_documents` - Inspektionsrapporter
-- `get_school_unit_statistics` - Skolenhetsstatistik
-- `get_national_statistics` - Nationell statistik
-- `get_program_statistics` - Programstatistik
-
-### API-integration
-Servern kopplar till tre av Skolverkets öppna API:er:
-
-**1. Syllabus API**
-Läroplaner (LGR11, GY11), ämnen, kurser, gymnasieprogram med kunskapskrav och centralt innehåll.
-
-**2. Skolenhetsregistret**
-Sök och filtrera skolor, förskolor och andra skolenheter. Inkluderar aktiva, nedlagda och vilande enheter.
-
-**3. Planned Educations API**
-Yrkeshögskola, SFI, Komvux och andra vuxenutbildningar med startdatum, platser och studietakt.
-
----
-
-
-## 📱 Snabbstart 
-
-### Claude (Webb)
+Det är enkelt att ansluta en LLM / AI-chatbot till MCP-servern. Anslut antingen direkt till den hostade servern (enkelt och smidigt) eller installera lokalt. Nedan finner du guider för olika klienter.
 
 
 
-https://github.com/user-attachments/assets/f7625e91-6f42-4301-b813-51f9bfcc7ef0
+<details>
 
+
+<summary><strong>1. AI-chatbotar</strong></summary>
+<details>
+  
+<summary><strong>ChatGPT (Web)</strong></summary>
+  
+--- 
+
+1. Öppna inställningar och aktivera Developer Mode
+2. Skapa ny anslutning med URL: `https://skolverket-mcp.onrender.com/mcp` 
+
+#### Videoguide (tryck play)
+![ChatGPT anslutning till MCP](https://github.com/user-attachments/assets/eb99a8ad-2154-4a58-b13f-c1edb57dbf47)
+
+
+</details>
+
+<details>
+<summary><strong>Claude (Web)</strong></summary>
+  
+--- 
 
 **1. Gå till claude.ai:**
 - Logga in på https://claude.ai
@@ -111,28 +53,31 @@ https://github.com/user-attachments/assets/f7625e91-6f42-4301-b813-51f9bfcc7ef0
 - Klicka **"Add MCP Server"** eller **"Connect"**
 - **Name:** `Skolverket MCP`
 - **URL:** `https://skolverket-mcp.onrender.com/mcp`
-- **Type:** Välj `HTTP` eller `Streamable HTTP`
 - Klicka **"Connect"** eller **"Add"**
+
+#### Videoguide (tryck play)
+https://github.com/user-attachments/assets/9ded5a37-c168-4ab4-8bac-cca2a4195628
 
 ---
 
-### Claude Desktop
+</details>
 
-**1. Öppna Claude Desktop Settings**
-- **macOS:** Claude-menyn → Settings
-- **Windows:** Claude-menyn → Settings
+</details>
+<img width="189" height="38" alt="claude chatgpt" src="https://github.com/user-attachments/assets/20a29640-40e0-43f1-8b0b-c3f6adae691a" />
 
-**2. Gå till Connectors:**
-- Klicka på **"Connectors"** i vänstermenyn
-- Klicka **"Add custom connector"**
+---
 
-**3. Fyll i formuläret:**
-- **Name:** `Skolverket MCP`
-- **Remote MCP server URL:** `https://skolverket-mcp.onrender.com/mcp`
-- **Advanced settings:** Lämna OAuth-fälten **tomma**
-- Klicka **"Add"**
+<details>
+---
 
-#### Alternativ: Lokal installation 
+
+<summary><strong>1. Lokal installation</strong></summary>
+
+
+
+<details>
+<summary><strong>Claude Desktop</strong></summary>
+  
 
 **1. Klona och bygg:**
 ```bash
@@ -161,9 +106,11 @@ npm install && npm run build
 
 **Notera:** Lokal installation använder stdio-transport via Developer-sektionen, inte Connectors.
 
----
+</details>
 
-### Claude Code
+<details>
+<summary><strong>Claude Code</strong></summary>
+  
 
 **Live-Server:**
 ```bash
@@ -178,35 +125,11 @@ claude mcp add skolverket node /absolut/sökväg/till/dist/index.js
 
 **Verifiera:** `claude mcp list`
 
----
+</details>
 
-### ChatGPT 
-
-#### I Webbläsaren (chatgpt.com)
-
-**1. Aktivera Utvecklarläget (engångsinstallation):**
-- Gå till https://chatgpt.com
-- Klicka på din **profil** (nere till vänster)
-- Välj **"Appar och sammanlänkningar"**
-- Hitta **"Utvecklarläge" (BETA)** och aktivera den blå toggle-knappen
-
-**2. Lägg till MCP-server:**
-- I samma "Appar och sammanlänkningar"-vy
-- Scrolla ner till **"Aktiva sammanlänkningar"**
-- Klicka **"Ny sammanlänkning"** eller **"+"**
-
-**3. Fyll i formuläret:**
-- **Namn:** `Skolverket MCP`
-- **Beskrivning:** (valfritt)
-- **URL för MCP-server:** `https://skolverket-mcp.onrender.com/mcp`
-- **Autentisering:** Välj **"Ingen autentisering"**
-- Markera **"Jag förstår och vill fortsätta"**
-- Klicka **"Skapa"**
-
----
-
-### OpenAI Codex (terminal)
-
+<details>
+<summary><strong>OpenAI Codex</strong></summary>
+  
 #### Remote Server (HTTP)
 
 **`~/.codex/config.toml`:**
@@ -215,8 +138,6 @@ claude mcp add skolverket node /absolut/sökväg/till/dist/index.js
 url = "https://skolverket-mcp.onrender.com/mcp"
 transport = "http"
 ```
-
-#### Lokal Installation
 
 **1. Klona och bygg (om ej redan gjort):**
 ```bash
@@ -242,9 +163,41 @@ command = "node"
 args = ["C:\\Users\\username\\skolverket-mcp\\dist\\index.js"]
 transport = "stdio"
 ```
+</details>
+</details>
+
+
+<img width="273" height="46" alt="claudecode openaicodex googlegemini" src="https://github.com/user-attachments/assets/c4c73367-e0f5-408a-a074-83b7ce45805c" />
+
+
+
 ---
 
-## 💡 Användningsområden
+## Funktioner
+
+Servern kopplar till tre av Skolverkets öppna API:er:
+
+**1. Syllabus API**
+Läroplaner (LGR22, GY25 m.m.), ämnen, kurser, gymnasieprogram med kunskapskrav och centralt innehåll.
+
+**2. Skolenhetsregistret**
+Sök och filtrera skolor, förskolor och andra skolenheter. Inkluderar aktiva, nedlagda och vilande enheter.
+
+**3. Planned Educations API**
+Yrkeshögskola, SFI, Komvux och andra vuxenutbildningar med startdatum, platser och studietakt.
+
+#### Verktyg (tools)
+MCP-servern implementerar MCP-protokollet med stöd för:
+- **41 verktyg** – 17 Syllabus API, 4 School Units, 17 Planned Educations (inkl. gymnasieutbildningar, statistik, dokument), 3 Support Data, 1 diagnostik
+- **4 resurser** – API-info, skoltyper, läroplanstyper, kurs- och ämneskoder
+- **5 promptmallar** – Kursanalys, versionsjämförelser, vuxenutbildning, studievägledning, kursplanering
+
+
+
+---
+
+
+## Användningsområden
 
 
 https://github.com/user-attachments/assets/8eefa26c-4162-49a5-adf0-82677a663b19
@@ -267,10 +220,9 @@ https://github.com/user-attachments/assets/8eefa26c-4162-49a5-adf0-82677a663b19
 
 ---
 
-## 🆘 Support
+## Övrigt
+**Skapad av:** [Isak Skogstad](mailto:isak.skogstad@me.com) • [X/Twitter](https://x.com/isakskogstad)
 
-**GitHub Issues:** https://github.com/KSAklfszf921/skolverket-mcp/issues
-**Email:** isak.skogstad@me.com • **X:** [@isakskogstad](https://x.com/isakskogstad) 
 [![MCP Badge](https://lobehub.com/badge/mcp/ksaklfszf921-skolverket-syllabus-mcp)](https://lobehub.com/mcp/ksaklfszf921-skolverket-syllabus-mcp)
 
 ---
